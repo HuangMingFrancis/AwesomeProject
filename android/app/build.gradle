@@ -91,7 +91,7 @@ def enableSeparateBuildPerCPUArchitecture = false
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-def enableProguardInReleaseBuilds = true
+def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion 23
@@ -135,21 +135,6 @@ android {
         }
     }
 
-    signingConfigs {
-        release {
-            storeFile file("ztesoft-release.keystore")
-            storePassword "9LEJKE28#FEAKCHK37CSLJ3"
-            keyAlias "ztesoft"
-            keyPassword "9LEJKE28#FEAKCHK37CSLJ3"
-        }
-
-        debug {
-            keyAlias 'ztesoft_debug'
-            keyPassword 'ztesoftdebug'
-            storeFile file('ztesoft_debug_key.jks')
-            storePassword 'ztesoftdebug'
-        }
-    }
 }
 
 dependencies {
